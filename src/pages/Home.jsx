@@ -37,27 +37,6 @@ export default function Home() {
 
 // when the state change occurs the entire component will be rerendered
 
-
-// getPopularMovies();
-
-  // movies = [
-  //   {
-  //     id: 1,
-  //     title: "John Wick",
-  //     release_date: "2024",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "World war 3",
-  //     release_date: "2020",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Terminator",
-  //     release_date: "1994",
-  //   },
-  // ];
-
   return (
     <>
       <div className="home">
