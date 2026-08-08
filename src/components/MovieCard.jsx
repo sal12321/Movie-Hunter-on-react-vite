@@ -12,7 +12,7 @@ export default function MovieCard({movie}){
 
     <div className="movie-poster">
 
-    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={"altImg"} />
+    <img src={`https://image.tmdb.org/t/p/w700${movie.poster_path}`} alt={"altImg"} />
     <div className="movie-overlay">
         <button className="favorite-btn" onClick={onFavClick} >  
             ❤️
