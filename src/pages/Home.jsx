@@ -38,7 +38,7 @@ export default function Home() {
 // when the state change occurs the entire component will be rerendered
 
 
-getPopularMovies();
+// getPopularMovies();
 
   // movies = [
   //   {
@@ -76,7 +76,7 @@ getPopularMovies();
 
         <div className="movies-grid">
 
-          { movies.map((movie) => (
+          { movies?.map((movie) => (
 
           <MovieCard movie={movie} key={movie.id} />
           
