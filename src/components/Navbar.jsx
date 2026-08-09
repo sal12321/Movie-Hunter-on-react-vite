@@ -2,10 +2,10 @@ import {Link} from "react-router-dom";
 import "../css/Navbar.css"
 
 
-export default function Navabar(){
+export default function Navbar(){
     return (
         <>
-        <div className="navabar">
+        <div className="navbar">
             <div className="navbar-brand">
                 <Link to="/">Movie App</Link>
             </div>

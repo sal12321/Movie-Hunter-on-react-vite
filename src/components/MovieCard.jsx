@@ -1,8 +1,24 @@
+import { createContext } from "react";
+import { useMovieContext } from "../context/MovieContext";
 import "../css/MovieCard.css"
-export default function MovieCard({movie}){
+import { Link } from "react-router-dom";
 
-    function onFavClick(){
-        alert("clicked");
+export default function MovieCard({movie}){
+ 
+    const {favorites, isFavorite, addToFavorite, removeFavorite} = useMovieContext() ;
+
+    const favorite = isFavorite(movie.id)
+
+    function onFavClick(e){
+        // alert("clicked");
+
+        e.preventDefault();
+
+        if(favorite) removeFavorite(movie.id);
+        else { addToFavorite(movie) };
+
+
+
     }
 
     return (
@@ -14,7 +30,9 @@ export default function MovieCard({movie}){
 
     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={"altImg"} />
     <div className="movie-overlay">
-        <button className="favorite-btn" onClick={onFavClick} >  
+        <button 
+        className={`favorite-btn ${favorite ? "active" : ""}`} 
+        onClick={onFavClick} >  
             ❤️
         </button>
     </div>
@@ -25,9 +43,15 @@ export default function MovieCard({movie}){
 
             <h3>{movie.title}</h3>
 
-            <p>{movie.release_date?.split("-")[0]}</p> 
+            <p>{movie.release_date?.split("-")[0]}  
+                <Link to= {`/movieDetail/${movie.id}`} className="movie-detail"> Know More </Link> 
+ </p> 
+            
 
-            </div>        
+
+
+            </div>   
+                 
 </div>
 
 

@@ -6,7 +6,7 @@
 
 .search-form {
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
   display: flex;
   gap: 1rem;
   padding: 0 1rem;
@@ -54,10 +54,14 @@
 }
 
 .movies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  flex-direction: row;
+  justify-content: space-evenly ;
+  flex-wrap: wrap;
+  gap: 1rem ;
+  padding: 1.5rem;
   width: 100%;
   box-sizing: border-box;
+  width: 100%;
 }

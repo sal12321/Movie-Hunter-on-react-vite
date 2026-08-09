@@ -2,6 +2,7 @@
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
+  max-height:400px;
 }
 
 .favorites h2 {
