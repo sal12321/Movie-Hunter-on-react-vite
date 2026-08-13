@@ -17,9 +17,7 @@ export default function MovieDetail() {
     const fetchMovieDetails = async () => {
       try {
         const data = await getMovieDetails(id);
-        // const response = await fetch(
-        //   `https://api.themoviedb.org/3/movie/${id}?api_key=YOUR_TMDB_API_KEY`
-        // );
+
         console.log("this is before setMovie")
         setMovie(data);
       } catch (err) {

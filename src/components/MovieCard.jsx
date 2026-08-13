@@ -47,9 +47,6 @@ export default function MovieCard({movie}){
                 <Link to= {`/movieDetail/${movie.id}`} className="movie-detail"> Know More </Link> 
  </p> 
             
-
-
-
             </div>   
                  
 </div>

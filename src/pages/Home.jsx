@@ -10,6 +10,9 @@ export default function Home() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
+  
+
   // call the function when there is any change in the second parameter(dependency array), if that is empty then that will be rendered once..
 
   useEffect(() => {
@@ -52,7 +55,7 @@ export default function Home() {
       setLoading(false);
     }
 
-    setSearchQuery("");
+    // setSearchQuery("");
   };
 
   // when the state change occurs the entire component will be rerendered

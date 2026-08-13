@@ -15,7 +15,6 @@ export default function App() {
 
 
 
-
   return (  
     <>
 <MovieProvider>
@@ -23,7 +22,7 @@ export default function App() {
   
     <main className="main-content">
       <Routes>
-        <Route path = "/" element = {<Home /> } />
+        <Route path = "/" element = {<Home onHomeClick ={null} /> } />
         <Route path = "/Favorites" element = {<Favorites /> } />
         <Route path = "/movieDetail/:id" element = {<MovieDetail /> } />
       </Routes>
